@@ -3,6 +3,9 @@ name: Build Release
 on: 
   workflow_dispatch:
 
+env:
+  PACKAGE_NAME: com.emdl.dynamic-variant-fix
+
 jobs:
 
   # Validate Repository Configuration
@@ -30,7 +33,7 @@ jobs:
     permissions:
       contents: write
     env:
-      packagePath: Packages/${{ vars.PACKAGE_NAME }}
+      packagePath: ./
     if: needs.config.outputs.config_package == 'true'
     steps:
 
@@ -56,7 +59,7 @@ jobs:
       # Zip the Package for release
       - name: Create Package Zip
         working-directory: "${{ env.packagePath }}"
-        run: zip -r "${{ github.workspace }}/${{ env.zipFile }}" .
+        run: zip -r "${{ github.workspace }}/${{ env.zipFile }}" . && echo "saved file at ${{ github.workspace }}/${{ env.zipFile }}"
       
       # Build a list of .meta files for future use
       - name: Track Package Meta Files
