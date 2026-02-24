@@ -1,0 +1,20 @@
+{
+    "name":"Unity 2022 Dynamic Variant Fix",
+    "id":"com.emdl.dynamic-variant-fix",
+    "url":"https://vrchat-community.github.io/template-package-listing/index.json",
+    "author":{
+        "email":"",
+        "name":"Error.mdl",
+        "url":""
+    },
+    "description":"Example listing of VRChat packages",
+    "infoLink":{
+        "url":"https://github.com/Error-mdl/Unity2022-Dynamic-Variant-Fix",
+        "text":"View on GitHub"
+    },
+    "bannerUrl":"banner.png",
+    "githubRepos":[
+    ],
+    "packages":[
+    ]
+}
