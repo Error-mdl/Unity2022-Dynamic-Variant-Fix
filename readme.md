@@ -1,0 +1,5 @@
+# Unity 2022 Dynamic Variant Fix
+
+Fix for #pragma dynamic_branch in Unity versions before 2022.3.40f1. In these versions, Unity would treat dynamic_branches as normal keywords and create keyword permutations with and without the dynamic_branch keyword. This means that unity would then compile exact copies of the shader with the dynamic keyword "set" and not "set" despite it not being a preprocessor symbol, bloating compile times and completely defeating the point of dynamic branching. This repository adds a shader variant preprocessor that removes the unnecessary duplicate variants. 
+
+Due to a quirk of unity's variant system, unity will refuse to set the value of dynamic_branch variable if it can't find a shader program permutation with that variable as a keyword. Thus this removes all keyword permutations that do not contain every dynamic_branch variable rather than removing the ones that contain them.
