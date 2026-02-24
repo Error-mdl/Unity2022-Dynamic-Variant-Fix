@@ -1,0 +1,19 @@
+{
+  "name": "com.emdl.dynamic-variant-fix",
+  "description": "Fix for dynamic_branch in unity versions before 2022.3.40f1",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "displayName": "Dynamic Variant Fix",
+  "hideInEditor": false,
+  "dependencies": {
+  },
+  "keywords": [
+    "graphics",
+    "performance",
+    "rendering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
