@@ -1,8 +1,8 @@
 name: Build Repo Listing
 
 env:
-  listPublishDirectory: Website
-  pathToCi: ci
+  listPublishDirectory: .vpmwebsite
+  pathToCi: .ci
   
 on: 
   workflow_dispatch:
